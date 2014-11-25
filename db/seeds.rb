@@ -21,9 +21,9 @@ people = 30.times.map do
   )
 end
 
-locations = 15.times.map do
+locations = 20.times.map do
   name = Faker::Address.state
-  Location.create!(name: name)
+  Location.create(name: name)
 end
 
 max_person_id = Person.maximum(:id)
